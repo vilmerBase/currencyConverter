@@ -95,7 +95,9 @@ async function getCurrencies (e) {
     let curValueField = document.querySelector('.curValue .value'),
     loader = document.querySelector('.loaderImage'),
     curInfoBlock = document.querySelector('.currencyInfo'),
-    curImg = document.querySelector('.currencyImg');
+    curImg = document.querySelector('.currencyImg'),
+    copyImg = document.querySelector('.copyIcon'),
+    copied = document.querySelector('.copied');;
     let numPattern = /^[0-9]*$/;
     let curInfo = 0,
         curRates = [];
@@ -105,6 +107,9 @@ async function getCurrencies (e) {
         curValueField.style.display = 'none';
         curInfoBlock.style.display = 'none';
         loader.style.display = 'block';
+        copyImg.style.display = 'block';
+        copied.style.display = 'none';
+        console.log(copyImg,copied)
         let cur1 = document.querySelector('.currencyList1 option:checked').value,
         cur2 = document.querySelector('.currencyList2 option:checked').value,
         curRes = 0,
